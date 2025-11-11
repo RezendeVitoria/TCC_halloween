@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff6600;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Catálogo de fantasias */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #2b2b2b;
+}
+
+.fantasia {
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    padding: 15px;
+    width: calc(33.333% - 13.4px);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fantasia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+}
+
+.fantasia img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fantasia h2 {
+    font-size: 1.3em;
+    color: #ffcc00;
+    margin-bottom: 8px;
+}
+
+.fantasia p {
+    font-size: 0.95em;
+    color: #e0e0e0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .fantasia {
+        width: calc(50% - 10px); /* 2 cards por linha */
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .fantasia {
+        width: 100%; /* 1 card por linha */
+    }
+    .catalogo {
+        padding: 20px 10px;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilo5.css" />
+    <title>Abóboras</title>
+</head>
+<body>
+    <header>
+        <h1>Abóboras</h1>
+        <p>Saiba mais sobre Abóboras</p>
+    </header>
+
+    <section>
+        <h2>O que vamos aprender?</h2>
+        <ul>
+            <li>A abóbora é originária das Américas e foi cultivada por povos indígenas muito antes da chegada dos europeus.</li>
+            <li>Pode ser usada em preparações doces (doces, bolos, tortas) e salgadas (sopas, purês, refogados).</li>
+            <li>Rica em vitamina A (devido ao betacaroteno), além de conter fibras, vitamina C e antioxidantes.</li>
+        </ul>
+
+        <button onclick="mostrarDetalhes()" aria-expanded="false" aria-controls="detalhes">Ver detalhes do curso</button>
+
+        <div class="detalhes" id="detalhes" hidden>
+            <p>Curso 100% gratuito</p>
+        </div>
+    </section>
+
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            const botao = document.querySelector("button");
+            if (detalhes.hasAttribute("hidden")) {
+                detalhes.removeAttribute("hidden");
+                botao.setAttribute("aria-expanded", "true");
+            } else {
+                detalhes.setAttribute("hidden", "");
+                botao.setAttribute("aria-expanded", "false");
+            }
+        }
+    </script>
+</body>
+</html>

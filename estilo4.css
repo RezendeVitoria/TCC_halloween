@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(0, 0, 0);
+    color: azure;
+}
+
+/* Header */
+header{
+    background: rgb(188, 0, 100);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1{
+    margin: 0;
+}
+
+nav{
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Faz os links quebrarem em telas pequenas */
+}
+
+nav a{
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: #ff99cc; /* destaque suave */
+}
+
+/* Seções */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section h2{
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer{
+    background: purple;
+    color: azure;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    nav a {
+        margin: 10px; /* mais espaço para toque em mobile */
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column; /* links empilhados em mobile */
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+}

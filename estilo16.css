@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #0e0a14;
+  color: #f5e6ff;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at center, #2a183b 0%, #0e0a14 100%);
+  color: #e6cfff;
+  border-bottom: 1px solid #38204a;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #c6a6ff;
+}
+
+/* ===== Intro Section ===== */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.intro .text {
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.intro h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #c49fff;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  line-height: 1.6;
+}
+
+.intro .image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(170, 130, 255, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.intro .image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Gallery Section ===== */
+.gallery {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #150d20;
+}
+
+.gallery h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #d5b8ff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #1b1128;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 0 25px rgba(150, 100, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(180, 130, 255, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-family: 'Cinzel', serif;
+  color: #d5b8ff;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  color: #cbb2f9;
+  padding: 0 1rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #38204a;
+  font-size: 0.9rem;
+  color: #9b83c5;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets (até 992px) */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro .image img {
+    max-width: 400px;
+  }
+
+  .gallery h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .intro .image img {
+    max-width: 300px;
+  }
+
+  .cards {
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 220px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+
+  .intro .image img {
+    max-width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}

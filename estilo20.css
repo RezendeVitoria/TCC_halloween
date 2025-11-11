@@ -1,0 +1,173 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ====== BASE ====== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ====== HERO ====== */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://cdn.pixabay.com/photo/2018/09/24/22/14/halloween-3709906_1280.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    color: orange;
+    text-shadow: 3px 3px 8px #000;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-text p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: orange;
+    color: #000;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff7b00;
+  }
+  
+  /* ====== ANIMAÇÃO ====== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ====== SEÇÕES ====== */
+  .content, .materials, .gallery {
+    padding: 4rem 2rem;
+    background-color: #222;
+    text-align: center;
+  }
+  
+  h2 {
+    color: orange;
+    margin-bottom: 2rem;
+  }
+  
+  /* ====== CARDS ====== */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* imagens verticais */
+  .card img {
+    width: 100%;
+    height: 350px;          /* altura maior para formato em pé */
+    object-fit: cover;      /* mantém proporção, cortando o excesso */
+    object-position: center top;
+    border-bottom: 3px solid orange;
+  }
+  
+  .card h3 {
+    margin: 1rem 0 0.5rem;
+    color: orange;
+  }
+  
+  /* ====== MATERIAIS ====== */
+  .materials {
+    background-color: #111;
+  }
+  
+  .materials ul {
+    list-style: square;
+    max-width: 600px;
+    margin: 1rem auto;
+    text-align: left;
+  }
+  
+  /* ====== GALERIA ====== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 400px;         /* altura vertical maior */
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  
+  /* ====== RODAPÉ ====== */
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid orange;
+    font-size: 0.9rem;
+  }
+  
+  /* ====== RESPONSIVO ====== */
+  @media (max-width: 600px) {
+    .hero-text h1 {
+      font-size: 2rem;
+      padding: 0 1rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .card img, .gallery-grid img {
+      height: 280px; /* reduz altura no celular */
+    }
+  }
+  

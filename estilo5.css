@@ -1,0 +1,99 @@
+/* Reset simples */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #F5E6CC;       /* bege claro, tom de outono */
+    color: #4B2E05;            /* marrom escuro */
+    line-height: 1.6;
+}
+
+header {
+    background: #D9643E;       /* laranja queimado */
+    color: #FFF8F0;            /* bege muito claro */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+section {
+    padding: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #FFF8F0;      /* leve contraste com fundo */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #A34700;           /* laranja escuro */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: square inside;
+    margin-bottom: 20px;
+    color: #6E4B1A;           /* marrom médio */
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: #D9643E;    /* laranja queimado */
+    color: #FFF8F0;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(217,100,62,0.5);
+}
+
+button:hover,
+button:focus {
+    background-color: #A34700;  /* laranja escuro */
+    outline: none;
+}
+
+.detalhes {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4B2E05;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}

@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #b5651d; /* Marrom antigo, lembrando faixas de múmia */
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Main */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    background-color: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 90%;
+}
+
+h2 {
+    color: #ffcc00;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Lista de curiosidades */
+.curiosidades ul {
+    list-style: square;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.curiosidades li {
+    margin-bottom: 0.5rem;
+}
+
+/* Imagem */
+.imagem img {
+    max-width: 300px;
+    border: 5px solid #b5651d;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #b5651d;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #111;
+    color: #888;
+    margin-top: 2rem;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .imagem img {
+        max-width: 250px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .imagem img {
+        max-width: 200px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .imagem img {
+        max-width: 150px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}

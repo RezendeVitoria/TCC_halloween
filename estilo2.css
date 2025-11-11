@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: rgb(255, 77, 0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+/* Container esquerdo (logo + menu) */
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 70px;
+}
+
+/* Menu principal */
+.lista-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.lista-menu li {
+    position: relative;
+}
+
+.lista-menu li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.lista-menu li a:hover {
+    background-color: rgb(255, 131, 69);
+    border-radius: 4px;
+}
+
+/* Submenu */
+.lista-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: rgb(255, 72, 0);
+    min-width: 180px;
+}
+
+.lista-menu li ul li a {
+    padding: 10px 15px;
+    gap: 8px;
+}
+
+/* Mostrar submenu ao passar o mouse */
+.lista-menu li:hover ul {
+    display: block;
+}
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    /* Esconde o menu principal e mostra o botão */
+    .lista-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* será mostrado via botão */
+        margin-top: 10px;
+    }
+
+    .lista-menu li {
+        width: 100%;
+    }
+
+    .lista-menu li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Submenus dentro de mobile */
+    .lista-menu li ul {
+        position: static;
+        display: none;
+        background-color: rgb(255, 100, 50);
+    }
+
+    .lista-menu li.show > ul {
+        display: block;
+    }
+
+    /* Botão hamburger */
+    .btn-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .btn-menu {
+        display: none; /* escondido em desktop */
+    }
+}

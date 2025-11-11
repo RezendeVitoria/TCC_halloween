@@ -1,0 +1,192 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ====== BASE ====== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #f8fff4;
+    background-color: #0c0c0c;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Creepster', cursive;
+    letter-spacing: 1px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ====== HERO ====== */
+  .hero {
+    background: linear-gradient(120deg, #000, #220022);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    color: #ff6600;
+    text-shadow: 0 0 15px #ff9933;
+    animation: pulse 2s infinite alternate;
+  }
+  
+  .hero p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ffd1a4;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #ff6600;
+    color: #000;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff9933;
+  }
+  
+  /* ====== ANIMAÇÃO ====== */
+  @keyframes pulse {
+    from { text-shadow: 0 0 10px #ff9933; }
+    to { text-shadow: 0 0 30px #ffcc66; }
+  }
+  
+  /* ====== IDEIAS ====== */
+  .ideas {
+    background: linear-gradient(135deg, #1a1a1a 60%, #220022);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: #111;
+    border: 2px solid #ff6600;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #ff6600;
+  }
+  
+  /* Ajuste de imagens para cards */
+  .card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-bottom: 3px solid #ff6600;
+    background-color: #111;
+  }
+  
+  .card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #ff9933;
+  }
+  
+  /* ====== MATERIAIS ====== */
+  .materials {
+    background: linear-gradient(135deg, #220022, #2a2a2a);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .materials ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+  
+  .materials li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .materials li::before {
+    content: "☠";
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+  }
+  
+  /* ====== GALERIA ====== */
+  .gallery {
+    background: linear-gradient(135deg, #220022, #000);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #ff6600;
+    background-color: #111;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  
+  /* ====== RODAPÉ ====== */
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #ff6600;
+    font-size: 0.9rem;
+  }
+  
+  /* ====== RESPONSIVO ====== */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .card img, .gallery-grid img {
+      height: auto;
+      max-height: 300px;
+    }
+  }
+  

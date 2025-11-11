@@ -1,0 +1,222 @@
+/* ======== CONTEÚDO GERAL ======== */
+.conteudo {
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+/* ======== INTRODUÇÃO ======== */
+.introducao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.introducao h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: rgb(255, 72, 0);
+}
+
+.introducao p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.introducao img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ======== BENEFÍCIOS ======== */
+.beneficios {
+    margin-bottom: 40px;
+}
+
+.beneficios h2 {
+    color: rgb(255, 72, 0);
+    margin-bottom: 15px;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.beneficios i {
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+
+/* ======== RECURSOS ======== */
+.recursos h2 {
+    color: rgb(255, 72, 0);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ======== CARDS ======== */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 72, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 72, 0);
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.card a:hover {
+    background: rgb(160, 53, 0);
+}
+
+/* ======== RODAPÉ ======== */
+.rodape {
+    background-color: rgb(255, 72, 0);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links-rodape {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-rodape a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-rodape a:hover {
+    color: rgb(255, 220, 180);
+}
+/* ======== RESPONSIVO ======== */
+@media (max-width: 1024px) {
+    .cards {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 20px;
+    }
+
+    .introducao h1 {
+        font-size: 1.8em;
+    }
+
+    .introducao img {
+        width: 250px;
+    }
+
+    .beneficios li {
+        font-size: 1em;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 45%; /* dois cards por linha */
+        padding: 15px;
+    }
+
+    .card img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .introducao h1 {
+        font-size: 1.5em;
+    }
+
+    .introducao p {
+        font-size: 1em;
+    }
+
+    .introducao img {
+        width: 200px;
+    }
+
+    .beneficios li {
+        font-size: 0.95em;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* empilha os cards */
+        padding: 12px;
+    }
+
+    .card img {
+        width: 120px;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .card a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
